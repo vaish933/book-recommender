@@ -1,0 +1,5 @@
+services:
+  - name:web
+    buildCommand: python -m pip install -r requirements.txt
+    startCommand: gunicorn app:app -b 0.0.0.0:$PORT
+    env: python=3.12.4
